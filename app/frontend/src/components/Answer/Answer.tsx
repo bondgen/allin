@@ -7,6 +7,7 @@ import styles from "./Answer.module.css";
 import { AskResponse, getCitationFilePath } from "../../api";
 import { parseAnswerToHtml } from "./AnswerParser";
 import { AnswerIcon } from "./AnswerIcon";
+import logo from '../../static/dblogo.png';
 
 interface Props {
     answer: AskResponse;
@@ -35,7 +36,7 @@ export const Answer = ({
         <Stack className={`${styles.answerContainer} ${isSelected && styles.selected}`} verticalAlign="space-between">
             <Stack.Item>
                 <Stack horizontal horizontalAlign="space-between">
-                    <AnswerIcon />
+                    <img src={logo} width={"50px"}></img>
                     <div>
                         <IconButton
                             style={{ color: "black" }}
